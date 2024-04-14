@@ -3,7 +3,7 @@
 #include "core/config/engine.h"
 #include "tracy_profiler.h"
 
-void initialize_godot_tracy_module(ModuleInitializationLevel p_level) {
+void initialize_tracy_module(ModuleInitializationLevel p_level) {
 	if (p_level == ModuleInitializationLevel::MODULE_INITIALIZATION_LEVEL_CORE) {
 #ifndef TRACY_ENABLE
 		print_line("The TRACY profiler is disabled.");
@@ -17,7 +17,7 @@ void initialize_godot_tracy_module(ModuleInitializationLevel p_level) {
 	}
 }
 
-void uninitialize_godot_tracy_module(ModuleInitializationLevel p_level) {
+void uninitialize_tracy_module(ModuleInitializationLevel p_level) {
 	if (p_level == ModuleInitializationLevel::MODULE_INITIALIZATION_LEVEL_CORE) {
 		TracyProfiler::finalize_singleton();
 	}
