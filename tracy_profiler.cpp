@@ -101,7 +101,7 @@ uint64_t TracyProfiler::zone_begin_t(const String &p_zone_name, const String &p_
 	const CharString c = p_zone_name.utf8();
 	TracyCZoneName(zone_id, c.ptr(), c.size());
 
-	const CharString t = p_zone_name.utf8();
+	const CharString t = p_text.utf8();
 	TracyCZoneText(zone_id, t.ptr(), t.size());
 
 	TracyIdConverter converter;
