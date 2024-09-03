@@ -1,3 +1,10 @@
+
+capture/
+import-chrome/
+import-fuschia/
+profiler/
+update/
+
 # Godot-specific ignores
 .import/
 .godot/
